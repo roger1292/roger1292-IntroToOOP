@@ -1,16 +1,16 @@
 
 /**
- * 
+ *
  * Problem:
  * As of right now, Java comes with 8 primitive datatypes. 
  * What if we wanted to create our own datatypes?
- * 
+ *
  * Solution:
  * Classes allow us to define a custom datatype.
  * When we create a variable with a class as its datatype, that variable is considered an object.
  * NOTE: We have already seen objects with the String class.  
  *          Try "ctrl + left-click" on the text "String" to see the source code of the String class.
- * 
+ *
  * An object is an instantiation of a class.
  * We would like objects to be able to:
  *      a) contain some data
@@ -24,8 +24,8 @@
  *
  * In the app, an individual bird should be able to "Tweet" if ageMonths is less than 3 and "Chirp" if ageMonths is
  * greater than or equal to 3.
- * 
- * 
+ *
+ *
  */
 public class Bird {
     /**
@@ -45,7 +45,12 @@ public class Bird {
      *         greater than or equal to 3.
      */
     public String sound(){
-        return "";
+        if(ageMonths < 3){
+            return "Tweet";
+        }else if(ageMonths >= 3){
+            return "Chirp";
+        }
+        return null;
     }
 
 }
